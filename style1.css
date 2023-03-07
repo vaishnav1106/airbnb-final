@@ -1,23 +1,23 @@
 body
 {
     margin:0px;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color:white;
+    font-family:       sans-serif;
     margin:0;
     padding:0;
-    
+    line-height: 20px;
 }
 .main
 {  
-   background-color:#f8f5f563  ;
-   padding: 20px 0px;
+   background-color:#f1f1f173  ;
+   padding: 23px 0px;
    position: relative;
    top:0;
    left:0;
-   font-weight: bold;
+   font-weight: 600;
    z-index: 1;
-   font-size: 15px;
-   text-align: center;   
+   font-size: 16px;
+   text-align: center; 
+    
 }   
 .main span
 { 
@@ -155,8 +155,6 @@ body
         
   }
   
- 
-
   .curve-border   /*the header middle group button's section*/
   {
 
@@ -208,8 +206,9 @@ body
   /*end  pseudo */
   .curve-border img
   {
-  width:30px;
-  height: 40px;
+  padding-top:3px ;
+  width:35px;
+  height:35px;
   cursor: pointer;
   }
   
@@ -266,7 +265,8 @@ body
   background: #ffffff;
   border:  1px  #ccc; 
   overflow: hidden;
-  box-shadow: .1px 5px 5px 5px rgba(109, 108, 108, 0.151);
+  height:6em;
+ 
 }
 
 .navbar-item
@@ -363,7 +363,9 @@ span
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 6%;
+    margin: 1.5%;
+    margin-left: 3%;
+    margin-right: 3%;
   }
   .flex-item {
     flex-wrap: wrap;
@@ -451,6 +453,7 @@ span
     width: 28px;
     height: 28px;
     background-color: transparent;
+    /* opacity: 60%; */
     border: none;
     cursor: pointer;
     outline: 1px white;
@@ -461,7 +464,8 @@ span
     display: block;
     width: 100%;
     height: 100%;
-    background-image: url("assets/love28.png");
+    /* background-color: rgba(0, 0, 0, 0.445); */
+    background-image: url("assets/love25.png");
     background-size: cover;
     background-position: center;
   }
@@ -572,7 +576,10 @@ span
    
               /* small-screen-header */
              
-   
+             .small-header
+             {
+              display: none;
+             }
    
               .navbar-container 
               {
@@ -687,7 +694,7 @@ span
        }
 
   /* media query for screen size 1440 */
-  @media only screen and (max-width: 1440px) 
+@media only screen and (max-width: 1440px) 
  {
 
            /* small-screen-header */
@@ -696,6 +703,8 @@ span
            {
              display: none;
            }
+
+          
 
            .navbar-container 
            {
@@ -780,6 +789,13 @@ span
           {
             display:none; 
           }
+           
+         
+          .flex-item img
+          {
+            width:100%;
+            height:300px;
+          }
 
         #map-button {
 			position: fixed;
@@ -817,6 +833,38 @@ span
            {
             align-items: center;
            }
+
+           .large-screen
+           {
+            padding-bottom: 1em;
+            background-color: #ffffff;
+           }
+
+           .curve-border 
+           {
+            border-radius: 50px;
+            border: 1px solid #ccc;
+            padding:0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+           }
+           .curve-border button
+           {
+            text-align: left;
+            padding:10px;
+            background-color: #ffffff;
+           }
+           
+           .curve-border img
+           {
+           padding-top:1px ;
+           width:35px;
+           height:35px;
+           cursor: pointer;
+           }
+
             .navbar
                 {
                   display: flex;
@@ -860,10 +908,7 @@ span
                     
                    }
           
-          .curve-border 
-          {
-             width:320px;
-          }
+          
 .right
 
         .right p
@@ -872,13 +917,16 @@ span
           
         }
         
-         #globe
+         .right #globe
         {
-          margin: left 50em;
+          width: 20px;
+          
         }
-        .right .icon-group
+         .icon-group .menu
         {
-          margin-left: 42em;
+          width: 10px;
+          height: auto;
+          margin-top: 4px;
         }
         
         /* grid */
@@ -1053,7 +1101,102 @@ span
             height: auto;
            }      
 
-        
+           .nav
+           {
+             position:sticky;
+             z-index: 1;
+             top:5.5em;
+             background: #ffffff;
+             border:  1px  #ccc; 
+             overflow: hidden;
+             box-shadow: .1px 5px 5px 5px rgba(109, 108, 108, 0.151);
+           }
+           
+           /* .navbar-container
+           {
+             margin-top:0% ;
+           } */
+           .navbar-item
+           {
+               opacity: 60%;
+           }
+           
+           .navbar-item:hover
+           {
+               opacity: 100%;
+           }
+           
+           .navbar-wrapper 
+           {
+             position: relative;
+             overflow: hidden;
+             overflow-x: auto;
+             -webkit-overflow-scrolling: touch;
+             white-space: nowrap;
+           }
+           
+           .navbar-item {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             margin-right: 10px;
+             font-size: 14px;
+             font-weight: bold;
+             padding:2%;
+           }
+           
+           .navbar-item:last-child {
+             margin-right: 0;
+           }
+           
+           .navbar-item img {
+             width: 2.4em;
+             height: auto;
+           }
+           
+           span
+           {
+             color: #222222;
+             text-decoration: none;
+           }
+           
+           
+           
+           .navbar-container 
+           {
+               margin-left: 4%;
+               margin-right:1%; /* its for the nav bar overlayer
+              margin-left: 10%;  when you want to make more overlayeer */
+               display:block;
+               position: sticky;
+               padding-top: -1em;
+               z-index: 1;
+           
+           }
+           .navbar-overlay
+                {
+                       top: 2%;
+                       right: 1em;
+                       width: 30px;
+                       height: 200px;
+                       background: linear-gradient(to right, transparent, rgb(255, 255, 255));
+                } 
+            
+           
+           .navbar
+               {
+                 display: flex;
+                 /* transition: transform 0.3s ease-out;  */
+               }
+           
+              
+              
+           /* Hide scrollbar */
+           ::-webkit-scrollbar 
+             {
+               display: none;
+             }
+           
         }
 
    
