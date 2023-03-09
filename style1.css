@@ -8,37 +8,39 @@ body
 }
 .main
 {  
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
    background-color:#f1f1f173  ;
-   padding: 23px 0px;
+   padding: 25px 0px;
    position: relative;
    top:0;
-   left:0;
+   left:-10px;
    font-weight: 600;
-   z-index: 1;
-   font-size: 16px;
+   z-index: 0;
+   font-size: 17px;
    text-align: center; 
     
 }   
 .main span
 { 
   color: #222222;
-  margin: 1px;
 }
 .main a
 {
   color: black;
 }
+
+/* small screen header */
 .small-header
 {
-    
-    background: rgb(255, 255, 255);
-    position: sticky;
+      display: block;
+      margin-top:2%;
+      background: white;
+      position: sticky;  
     top:0;
     width:100%;
     padding-top: 10px;
     padding-bottom: 2px;
     align-items: center;
-    font:12px;
     z-index: 1;
 }
 
@@ -85,53 +87,35 @@ body
 }
 
 /* filter icon on mobile search */
-.header-right button 
+.header-right .filter-btn 
 {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  background-color: transparent;
   position: absolute;
   cursor: pointer;
-  border-radius: 50%; /* add circular border */
-  border: 2px solid #ccc; /* add border color */
-  width: 30px; /* added width */
-  height: 30px; /* added height */
   position: sticky;
+  border:none;
   top: 0px;
   
 }
 
  .filter-btn img 
 {
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
 }
 
-.filter-btn 
-{
-  position: absolute;
-  top: 1.2em;
-  right: 1em;
-  width: 20px;
-  height: 20px;
-  font-size: 12px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
     
   /* header for large screen */
   .large-screen
   {  
       display: flex;
-      border:  1px solid #ccc;
-      padding: 1px;
-      background: rgb(255, 255, 255);
+      border:  1px solid #dddddd;
+      padding: 10px;
+      background: #ffffff;
       justify-content: space-between;
+      box-shadow: 1px 1px 1px 1px rgb(179, 175, 175);
       position:sticky;
       top:0px;
       height:auto;
@@ -143,12 +127,13 @@ body
     width: 100px;
     height: auto;
     margin-top: 15px;
+    margin-left: 40px;
    
   }
   .center
   {   
       align-items: center;
-      margin-right:6em;
+      margin-right:112px;
       position: relative;
       top:.6em;
       left:0;
@@ -161,7 +146,7 @@ body
   border-radius: 50px;
   border:  1px solid #ccc;
   display: flex;
-  width: 325px;
+  width: 350px;
   height:auto;
   position: absolute;
   overflow: hidden;
@@ -208,6 +193,7 @@ body
   .curve-border img
   {
   padding-top:3px ;
+  margin-left: 25px;
   width:35px;
   height:35px;
   cursor: pointer;
@@ -216,51 +202,69 @@ body
   .right  /* the right side buttons iin the header*/
   {
     display: flex;
-    margin-right: 5%;
+    margin-right: 10%;
     justify-content: space-between;
     
   }
   .right p
   {
+    font-weight: 1%;
+    font-size: 16px;
    text-decoration: none;
-   margin-right: 1.5em;
+   margin-right: 1em;
+   padding: 5px;
    cursor: pointer;
-   border-radius: 12%;
+   border-radius: 12px;
    border-color: #bdbdbd;
+   margin-top: 10px;
   } 
-  p:hover
+  .right p:hover
   {
-    
-    border-color: #bdbdbd;
+    /* margin-top:10px; */
+    background-color: #bdbdbd41;
   }
   
   
   .right #globe
   {
   justify-content: space-between;
-  width: 1.3em;
+  width: 1em;
   height:auto;
   cursor: pointer;
-  margin-right: 10em;
+  margin-right: .1em;
   margin-top: 15px;
+  border-radius: 50px;
+  padding: 5px;
+  }
+  #globe:hover
+  {
+    background-color: #bdbdbd41;
+   
   }
   
-   .right .icon-group 
+  .icon-group 
   {
-    display: flex;
-    border: 1px groove #777676;
-    border-radius:40px;
-    margin-top: .7em ;
-    margin-left: 12em;
+   
+    margin-top: -.6em ;
+    margin-right: -8em;
     cursor: pointer;
     position:absolute;
+    
+  }
+  .icon-group:hover
+  {
+    -moz-box-shadow: 0 0 5px #fff;
+    -webkit-box-shadow: 0 0 5px #fff;
+    box-shadow: 0px 0px 5px #fff;
+   
   }
   
    
   .icon-group img
   {
-  width:25px; 
-  padding: 1px 2px;
+  width:4.5em; 
+  height:4.5em;
+  margin-left: -10%;
   
   }
 
@@ -269,11 +273,12 @@ body
 {
   position:sticky;
   z-index: 1;
-  top:4em;
+  top:4.2em;
   background: #ffffff;
   border:  1px  #ccc; 
   overflow: hidden;
-  height:6em;
+  height:5em;
+  box-shadow: 1px 2px 2px 1px rgb(219, 210, 210);
  
 }
 
@@ -395,7 +400,7 @@ span
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 1.5%;
+    margin: 4%;
     margin-left: 3%;
     margin-right: 3%;
   }
@@ -1197,75 +1202,43 @@ span
             }
            .small-header
             {   display: block;
-                margin-top:2%;
-                background: white;
-                position: sticky;
-                top:0;
-               
             }
             .mobile-header
             {
               display: flex;
               justify-content: space-between;
               align-items: center;
-              padding: 10px;
-              margin: 10%;
+              padding: 8px;
+              margin: 3.5%;
               background-color: #ffffff;
-              border-radius: 40px;
-              box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5);
               position: sticky;
               top: 0px;
               margin-bottom: 3%;
+             
         
             }
-        
-            .header-left 
-            {
-              display: flex;
-              align-items: left;
-            
-            }
-        
-            .header-left .text
-            {
-                opacity:50%;
-            }
-            .header-left button
-            {
-              border: none;
-              margin-right: 10px;
-              font-size: 16px;
-              color: #333;
-              background-color: transparent;
-              cursor: pointer;
-            }
-        
-            .header-left .search-btn img 
-            {
-              width: 20px;
-              height: 20px;
-            }
+
             /* filter icon on mobile search */
-             .header-right button 
+               .filter-btn 
             {
               display: flex;
               align-items: center;
-              justify-content: center;
-              border: none;
               background-color: transparent;
               position: relative;
               cursor: pointer;
-              border-radius: 50%; /* add circular border */
-             border: 2px solid #ccc;  /*  add border color */
-               width: 30px; /*  added width*/
-               height: 30px; /*  added height */
-              
+              width: 30px; /*  added width*/
+              height: 30px; /*  added height */
+              padding-bottom:2%;
              } 
+             .location-btn
+             {
+              font-size: 10px;
+             }
         
            .header-right .filter-btn img 
             {
-              width: 20px;
-              height: 20px;
+              width: 50px;
+              height: 50px;
             }
         
          .header-right .filter-btn 
@@ -1275,7 +1248,6 @@ span
               right: 15px;
               width: 30px;
               height: 30px;
-              font-size: 12px;
               color: white;
               display: flex;
               justify-content: center;
@@ -1285,19 +1257,22 @@ span
 
 .nav
 {
+
+  padding-top: 1px;
   position:sticky;
   z-index: 1;
   top:5.5em;
-  background: #ffffff;
-  border:  1px  #ccc; 
+  background: #c05757;
+  border:  1px  #ffffff; 
   overflow: hidden;
-  box-shadow: .1px 5px 5px 5px rgba(109, 108, 108, 0.151);
+  box-shadow: .1px 2px 2px 2px rgba(109, 108, 108, 0.151);
 }
 
-/* .navbar-container
+.navbar-container
 {
-  margin-top:0% ;
-} */
+ padding-top :0;
+ 
+}
 .navbar-item
 {
     opacity: 60%;
@@ -1324,7 +1299,7 @@ span
   margin-right: 10px;
   font-size: 14px;
   font-weight: bold;
-  padding:2%;
+  
 }
 
 .navbar-item:last-child {
@@ -1351,13 +1326,12 @@ span
    margin-left: 10%;  when you want to make more overlayeer */
     display:block;
     position: sticky;
-    padding-top: -1em;
     z-index: 1;
 
 }
 .navbar-overlay
      {
-            top: 2%;
+        
             right: 1em;
             width: 30px;
             height: 200px;
@@ -1387,10 +1361,14 @@ span
             position: relative;
             flex-wrap: wrap;
             position:relative;
-            /* flex-basis: 30em; */
             height:auto;
             margin-bottom: 1%;
             font-size:15px;
+           }
+           .flex-item
+           {
+             width:100%;
+             height:80%
            }
            .big-screen
            {
@@ -1448,46 +1426,7 @@ span
                 }      
 
 
- /* @media only screen and (max-width: 942px)
-    {
-      .main{display:none;}
-      
-      .center
-      {
-      padding-bottom: 15px;
-      align-items: center;
-      display: flex;
-      margin-right:25%;
-      justify-content: center;
-      
-      } */
-   
-   /*.curve-border  the header middle group button's section
-   {
-    margin-left: 280px;
-    width:280px;
-   */
-    
-    /*}
-   .curve-border:hover
-   {
-      box-shadow:  6px 3px 3px grey;
-   }
-   .curve-border button the header middle group button
-        {
-        border:none;
-        padding: 0 15px;
-        cursor: pointer;font-size: 12px;
-        
-        }
- 
-    .location-btn .text
-    {
-      padding-bottom: -2%;
-    }
-     }*/
 
-/*  mobile screen*/
  @media only screen and (max-width: 550px) {
   .main
   {
@@ -1500,26 +1439,27 @@ span
   }
 
   /* small screen header */
- .header
-  {
-    display:grid;
-    
+  .small-header
+  {   display: block;
+      margin-top:2%;
+      background: white;
+      position: sticky;
+      top:0;  
   }
-  
   .mobile-header
   {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    margin: 13%;
+    padding: 10px;
+    margin: 10%;
     background-color: #ffffff;
     border-radius: 40px;
-    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5);
+    box-shadow: 1px 2px 5px 1px rgba(0,0,0,0.5);
     position: sticky;
-    top: 100px;
-    margin-bottom: 6px;
-    
+    top: 0px;
+    margin-bottom: 3%;
+
   }
 
   .header-left 
@@ -1537,18 +1477,17 @@ span
   {
     border: none;
     margin-right: 10px;
-   
-    font-size: 14px;
+    font-size: 16px;
     color: #333;
     background-color: transparent;
     cursor: pointer;
   }
 
   .header-left .search-btn img 
-  { margin-bottom: 30%;
+  {
     width: 20px;
     height: 20px;
-  }  */
+  }
   /* filter icon on mobile search */
    .header-right button 
   {
@@ -1559,37 +1498,36 @@ span
     background-color: transparent;
     position: relative;
     cursor: pointer;
-    border-radius: 50%; /* add circular border */
-    border: 2px solid #ccc; /* add border color */
-  width: 30px;  /*  added width */
-     height: 30px;/* added height */
+     width: 30px; /*  added width*/
+     height: 30px; /*  added height */
     
-  }
+   } 
 
-   .header-right .filter-btn img 
+ /* .header-right .filter-btn img 
   {
-    width: 15px;
-    height: 15px;
-  }
+    width: 20px;
+    height: 20px;
+  } */
 
 .header-right .filter-btn 
   {
     position: absolute;
-    top: 25px;
-    right: 10px;
-    width: 25px;
-    height: 25px;
+    top: 18px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
     font-size: 12px;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-  } 
- 
-  .nav{
-    top: 6em;
   }
+  .nav
+  {
+    top: 4.5em;
+  }
+
+
   /* grid */
   #block
   {
