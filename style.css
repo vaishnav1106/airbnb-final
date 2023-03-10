@@ -638,6 +638,7 @@ padding-top:1px ;
   {
     display:none;
   }
+             
    
               .navbar-container 
               {
@@ -645,8 +646,9 @@ padding-top:1px ;
                   margin-right:15%;
                   display:block;
                   position: sticky;
-                  top:.1em;
+                  top:-4em;
                   z-index: 1;
+                  /* padding-top:1em; */
    
               }
              
@@ -672,8 +674,8 @@ padding-top:1px ;
                       position: sticky;
                       float:right;
                       margin:1%;
-                      margin-top:-5em;
-                      margin-right: 8em;
+                      margin-top:-4em;
+                      margin-right: 4.5em;
                       }
                       .navbar-button:hover
                       {
@@ -687,6 +689,28 @@ padding-top:1px ;
                           width:30%;
                           height:100%;
                       }
+
+                      .navbar-buttons
+                      {
+                       width:10%;
+                       height:auto;
+                       padding:8px;
+                       margin-top: -9.5%;
+                       margin-right:-10px;
+                       border-radius: 12%;
+                       border:1px black;
+                       float: right;
+                   } 
+                   .navbar-buttons img
+                   {
+                    width:10em;
+                    height:auto;
+                   }
+                   .navbar-buttons:hover
+                   {
+                    padding-top:.1px ;
+        
+                   }
       
            
           .right p
@@ -706,22 +730,7 @@ padding-top:1px ;
             margin-left: 17em;
           }
        /* navbar-buttons */
-       .navbar-buttons
-              {
-               width:10%;
-               height:auto;
-               padding:8px;
-               margin-top: -8%;
-               margin-right:-20px;
-               border-radius: 12%;
-               border:1px black;
-               float: right;
-           } 
-           .navbar-buttons:hover
-           {
-            padding-top:.1px ;
-
-           }
+      
 
            .flex-item {
             flex-wrap: wrap;
@@ -1010,7 +1019,7 @@ padding-top:1px ;
            
            .curve-border img
            {
-           padding-top:1px ;
+           padding-top:5px ;
            width:30px;
            height:30px;
            cursor: pointer;
